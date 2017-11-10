@@ -14,7 +14,7 @@ print(array_num[2])
 print(array_num[3])
 
 
-# append an item to an array
+# append an item to the end of an array
 print('Start: ', array_num)
 array_num.append(31)
 print('End: ', array_num)
@@ -41,5 +41,4 @@ print(new_array)
 # convert array to a list
 print(type(new_array))
 arr_list = new_array.tolist()
-print(arr_list)
 print(type(arr_list))
