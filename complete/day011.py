@@ -29,7 +29,7 @@ def div_binary():
     s = input('Give me binaries!: ')
     l = s.split(',')
     for i in l:
-        if int(str(i), 2) % 5 == 0: # not sure exactly what this is checking against...
+        if int(str(i), 2) % 5 == 0: # second argument is the base, for binaries, you want base 2
             print(f'Output: {i}')
 
 div_binary()
