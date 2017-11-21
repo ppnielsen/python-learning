@@ -1,4 +1,3 @@
-'''
 # accept a string and calculate a number of digits
 s = input('Type a string: ')
 l, d = 0, 0
@@ -56,10 +55,13 @@ for i in range(100,401):
     even_digits.append(s)
 print(even_digits)
 
-'''
-
 # create a program that will print out a pattern of an 'A'
 letter_A = ''
 for row in range(0,7):
   for col in range(0,7):
-    if( ( ( col == 1 or col == 5 ) and col != 0 ) or ( ( row == 0 or row == 3 ) and (  ) ) )
+    if( ( ( col == 1 or col == 5 ) and row != 0 ) or ( ( row == 0 or row == 3 ) and ( col > 1 and col < 5 ) ) ):
+      letter_A = letter_A + '*'
+    else:
+      letter_A = letter_A + ' ' # have to print a space, otherwise the stars are jumbled together
+  letter_A = letter_A + '\n'
+print(letter_A)
