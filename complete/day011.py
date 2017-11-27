@@ -1,3 +1,7 @@
+'''
+Day 11 of Cup of Code tutorial to Python Mastery
+'''
+
 # take 2 digits m,n as inputs and generate a 2-d array
 # the element value in the i-th row and j-th col should be i * j
 row_num = 3
@@ -18,7 +22,7 @@ while True:
     if l:
         all_caps.append(l.upper())
     else: # will break if user doesn't input any thing and presses enter!
-        break;
+        break
 for i in all_caps:
     print(i)
 
