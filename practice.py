@@ -182,14 +182,33 @@
 # cart.show()
 
 
-import requests
-import random
-import urllib.request
+''' Download File '''
+# run pyodbc to run sql for guids
+# output guids to disk
+# download each guid and save as filename
 
-def dl_img(url):
-    urllib.request.urlretrieve(url, 'kobe.jpg')
+import shutil # used to output file to disk
+import requests # used to download file
+import mimetypes # used for determining file type
 
-dl_img('https://pixel.nymag.com/imgs/daily/intelligencer/2016/04/13/13-kobe-bryant-2016.w710.h473.2x.jpg')
+url = 'http://www.msuathletics.ru/books/bible/vert_jump_bible.pdf'
+response = requests.get(url, stream=True)
+
+# find content type
+content_type = response.headers['content-type']
+
+# determine extension
+if content_type == 'image/jpeg':
+    ext = 'jpeg'
+else:
+    ext = mimetypes.guess_extension(content_type)
+
+# download file
+filename = f'dlFile{ext}'
+
+with open(filename, 'wb') as out_file:
+    shutil.copyfileobj(response.raw, out_file)
+del response
 
 
 
