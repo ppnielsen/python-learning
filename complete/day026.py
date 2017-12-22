@@ -1,4 +1,5 @@
 '''
+Python Crash Course - Machine Learning Foundations
 Day 26: numpy
 Crash Course pt 2
 Matrix is a 2d array and mathematical object containing numbers
@@ -59,6 +60,6 @@ print(p)
 random_matrix = np.random.random((10,10))
 print(random_matrix)
 
-# mean and variances
+# mean and variances calculated on np arrays
 arr.mean()
 arr.var()
